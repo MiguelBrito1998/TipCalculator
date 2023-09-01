@@ -1,0 +1,150 @@
+body{
+    background-color:rgb(190, 208, 215);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:cursive ;
+}
+
+#titulo{
+    color: white;
+    font-size: 50px;
+    -webkit-text-stroke: 2px black; /* Borde de 2px de ancho en navegadores WebKit (Chrome, Safari, etc.) */
+    /* tex-st 2px black; Borde de 2px de ancho en navegadores que soportan la propiedad text-stroke */
+}
+
+
+
+#pad{
+    margin-bottom: 30px;
+    display: flex ;
+    justify-content: center;
+}
+#Bill{
+    background-color: white;
+    border:solid gray ;
+    border-radius: 10px;
+}
+#total button{
+    align-self: flex-end;
+    margin-top: auto;
+    width: 100px;
+}
+#total_persona{
+    margin-top: 40px;
+}
+
+.centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#total{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    background-color:cyan;
+    border-radius: 20px;
+    display: flex;
+    border:solid black  ;
+}
+
+#aparte{
+    display:block;
+}
+
+#aparte p{
+    display: block ;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: start; /* Centra el texto horizontalmente */
+}
+
+
+.contenedor{
+    background-color:black;
+    display: flex;
+    border-radius: 10px;
+    border:solid gray ;
+}
+
+.contenedor input[type='text']{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.show{
+    flex:1;  /*Distribuye el espacio disponible igualmente en los divs*/
+    border:1px solid #ccc;
+    padding: 10px;
+    margin:5px
+}
+
+.Tip{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.btns{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+.btns_button{
+    background-color:cyan;
+    border-radius: 5px;
+    width: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-family:cursive;
+    font-size: 20px;
+}
+
+.colores{
+    background-color:rgb(4, 35, 78);
+    color: aliceblue;
+    font-family:cursive;
+    font-size: 20px;
+}
+
+#reset{
+    
+    width: 100%;
+    background-color:rgb(4, 35, 78);
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-family:cursive;
+    font-size: 20px;
+    color: white;
+}
+
+#reset:hover{
+    cursor: pointer;
+    background-color:rgb(4, 35, 78);
+    border-radius: 5px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-family:cursive;
+    font-size: 20px;
+    color: white;
+}
+
+

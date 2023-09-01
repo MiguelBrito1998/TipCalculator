@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <p id="titulo">TIP CALCULATOR</p>
+    <div class="contenedor">
+        <div class="show" id="Bill">
+            <div class="center-container">
+                <div>
+                    <p>Bill</p>
+                    <input type="text" id="pad" value="0" maxlength="8">
+                </div>
+                <fieldset class="btns">
+                    <legend class="legend">Select Tip %</legend>
+                    <button class="btns_button    colores" id="default">5%</button>
+                    <button class="btns_button" >10%</button>
+                    <button class="btns_button" >15%</button>
+                    <button class="btns_button" >20%</button>
+                    <button class="btns_button" >25%</button>
+                    <input type="text" class="btns_button" id="custom" placeholder="%" maxlength="3">
+                </fieldset>
+                <div>
+                    <p>Number of people</p>
+                    <input type="text" id="personas" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="show" id="total">
+            <div>
+                <div class="Tip">
+                    <div id="aparte">
+                        <p>Tip amount</p>
+                    </div>
+                    <p id="total_persona">0</p>
+                </div>
+                <div class="Tip">
+                    <p>Total</p>
+                    <p id="total_total">0</p>
+                </div>
+            </div>
+            <div >
+                <button id="reset">  RESET  </button>
+            </div>
+        </div>
+    </div>
+    <script src="./fuction.js"></script>
+</body>
+</html>
