@@ -12,6 +12,8 @@ let custom=document.getElementById("custom");
 
 
 let porcent=5;
+let arrayCustom=[];
+const mask='##%';
 
 
 
@@ -28,6 +30,7 @@ btnReset.addEventListener('click',()=>{
     peopleNumber=0;
     tipResult.innerHTML=0;
     totalTotal.innerHTML=0;
+    arrayCustom.length=0;
     custom.value='';
     calculartodo();
 })
@@ -75,41 +78,54 @@ function calculartodo(){
     }
 }
 
+var regex=/^\d+%$/;
 
-custom.addEventListener('input',()=>{
-    if (isNaN(custom.value)||custom.value==''){
-        predeterminado.classList.add("colores");
-        custom.classList.remove("colores");
-        porcent=5;
-        console.log("el custom esta vacio, no es un valor numerico o es cero");
-        tipResult.innerHTML=0;
-        totalTotal.innerHTML=0;
-    }else{
-        console.log("ahora estas aqui papa");
-        button.forEach(element=>{
-            element.classList.remove("colores");
-        custom.classList.add("colores");
-        porcent=custom.value;
-        calculartodo();
-        })
-    }
-})
+// custom.addEventListener('input',()=>{
+//     console.log(custom.innerHTML);
+//     if (!regex.test(custom.value)){
+//         predeterminado.classList.add("colores");
+//         custom.classList.remove("colores");
+//         porcent=5;
+//         tipResult.innerHTML=0;
+//         totalTotal.innerHTML=0;
+//         console.log('Por aqui papa')
+//     }else{
+//         console.log("por aqui paso")
+//         button.forEach(element=>{
+//             element.classList.remove("colores");
+//         custom.classList.add("colores");
+//         porcent=custom.value.remove('%','');
+//         console.log('Aqui 12')
+//         calculartodo();
+//         })
+//     }
+// })
 
 custom.addEventListener('click',()=>{
     if (isNaN(custom.value)||custom.value==''){
         predeterminado.classList.add("colores");
         custom.classList.remove("colores");
         porcent=5;
-        console.log("el custom esta vacio, no es un valor numerico o es cero");
         tipResult.innerHTML=0;
         totalTotal.innerHTML=0;
-    }else{
-        console.log("ahora estas aqui papa");
-        button.forEach(element=>{
-            element.classList.remove("colores");
-        custom.classList.add("colores");
-        porcent=custom.value;
-        calculartodo();
-        })
     }
+})
+
+
+custom.addEventListener('keydown',(event)=>{
+    if(event.key=='Backspace' || event.key=='Delete'){
+        arrayCustom.pop();
+        return;
+    }
+    event.preventDefault();
+    const numbers=["1","2","3","4","5","6","7","8","9"];
+    if (arrayCustom.length<=1 && numbers.includes(event.key)){
+        arrayCustom.push(event.key,'%');
+    }else{
+        if (arrayCustom.length!=3){
+            arrayCustom[1]=event.key;
+            arrayCustom[2]='%';
+        }
+    }
+    custom.value=arrayCustom.join('');
 })
